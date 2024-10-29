@@ -1,0 +1,23 @@
+/*
+ * Copyright (c) 2024 Silicon Laboratories Inc.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+&flash0 {
+	partitions {
+		compatible = "fixed-partitions";
+		#address-cells = <1>;
+		#size-cells = <1>;
+
+		slot0_partition: partition@2000 {
+			label = "slot0";
+			reg = <0x0002000 DT_SIZE_K(2048-8-16)>;
+		};
+
+		storage_partition: partition@1FC000 {
+			label = "storage";
+			reg = <0x01FC000 DT_SIZE_K(16)>;
+		};
+	};
+};
