@@ -52,9 +52,9 @@
 			#address-cells = <1>;
 			#size-cells = <1>;
 
-			flash0: flash@8202000 {
+			flash0: flash@8200000 {
 				compatible = "soc-nv-flash";
-				reg = <0x8202000 DT_SIZE_K(2040)>;
+				reg = <0x8200000 DT_SIZE_K(2048)>;
 				write-block-size = <1>;
 				erase-block-size = <4096>;
 			};
